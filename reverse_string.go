@@ -1,6 +1,11 @@
 package reverse_string
 
+import "strings"
+
 func ReverseString(input string) (output string) {
-	// solution goes here
-	return output
+	var b strings.Builder
+	for _, r := range []rune(input) {
+		b.WriteRune(r)
+	}
+	return b.String()
 }
