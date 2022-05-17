@@ -4,8 +4,9 @@ import "strings"
 
 func ReverseString(input string) (output string) {
 	var b strings.Builder
-	for _, r := range []rune(input) {
-		b.WriteRune(r)
+	runes := []rune(input)
+	for i := range runes {
+		b.WriteRune(runes[len(runes)-1-i])
 	}
 	return b.String()
 }
